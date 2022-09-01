@@ -2,6 +2,20 @@
 ### AI Hub 양재 인공지능 웹 개발 프론트엔드 2022/08/01 ~ 2022/08/30
 주제: **영화추천서비스 + 영화 리뷰 커뮤니티**
 
+## Page images
+#### Home
+![main](./images/home.png)
+
+#### Movie Modal
+![system-structure](./images/modal.png)
+
+#### My Report
+![system-structure](./images/report.png)
+
+
+
+
+## 시스템 구조
 AI HUB - 인공지능 웹 개발 트랙에서 진행한 프로젝트의 프론트엔드 파트를 담당하였다. 시스템 구조는 아래와 같다.
 
 ![system-structure](./images/system-structure.png)
@@ -15,7 +29,8 @@ AI HUB - 인공지능 웹 개발 트랙에서 진행한 프로젝트의 프론�
 * 리뷰 CRUD (별점 및 리뷰 추천기능)
 * 영화검색
 
-## 컴포넌트 단위 기능 정의
+
+
 ### Home.js ('/')
 * Redux를 사용하여 TMDB에서 박스오피스랭킹, 상위평점영화, 개봉예정작 영화리스트를 받아온다. 
 * 박스오피스 랭킹 리스트에서 랜덤한 영화를 Banner 컴포넌트에 전달한다.
