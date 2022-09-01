@@ -41,7 +41,6 @@ app.use("/uploads", express.static("uploads")); // 이미지 경로 접근 허�
 
 //DB 연결
 // mongoose.connect("mongodb://localhost:27017/Cinemaster");
-// "mongodb+srv://jisu:4232@cinemaster.edkazqq.mongodb.net/?retryWrites=true&w=majority",
 mongoose.connect(process.env.DB_CONNECT);
 
 mongoose.connection.on("connected", () => {
