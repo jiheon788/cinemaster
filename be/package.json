@@ -1,0 +1,54 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "추천시스템 AI Hub 양재 인공지능 웹 개발 백엔드",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jisulee42@github.com/AIHub-Cinemaster/movie-recommendation-web-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AIHub-Cinemaster/movie-recommendation-web-back/issues"
+  },
+  "homepage": "https://github.com/AIHub-Cinemaster/movie-recommendation-web-back#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.3.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.0.1",
+    "exceljs": "^4.3.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.34",
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.4.5",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "3.3.4",
+    "nodemailer": "^6.7.7",
+    "redis": "^4.2.0",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/preset-env": "^7.18.10",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "2.7.1"
+  }
+}
