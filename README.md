@@ -1,6 +1,11 @@
 # CINEMASTER
-### AI Hub 양재 인공지능 웹 개발 프론트엔드 2022/08/01 ~ 2022/08/30
 주제: **영화추천서비스 + 영화 리뷰 커뮤니티**
+
+|||
+|------|---|
+|@jiheon788|FE/DESIGN|
+|@jisulee42|BE/배포|
+|@Hyyena|PM/BE/RS|
 
 ## Page images
 #### Home
