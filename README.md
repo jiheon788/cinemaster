@@ -1,34 +1,31 @@
 <div align="center">
 <h1>
 CINEMATER </br>
-영화 추천 커뮤니티 웹 사이트 구현</br>
+영화추천서비스 + 영화 리뷰 커뮤니티</br>
 2022.07 ~ 2022.08
 </h1>
 
-<img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"/>  <img alt="ExpressJs" src="https://img.shields.io/badge/Express.js-A8B9CC?style=for-the-badge&logo=Node.js&logoColor=white"/>  <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="NodeJs" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/>  
+<img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"/>  <img alt="ExpressJs" src="https://img.shields.io/badge/Express.js-A8B9CC?style=for-the-badge&logo=Node.js&logoColor=white"/>  <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="NodeJs" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/> 
 
-
-|||
+|Github|Part|
 |------|---|
-|@jiheon788|FE/DESIGN|
-|@jisulee42|BE/배포|
-|@Hyyena|PM/BE/RS|
-
+|@jiheon788|FE / DESIGN|
+|@jisulee42|BE / 배포|
+|@Hyyena|PM / BE / RS|
 
 </div>
 
-주제: **영화추천서비스 + 영화 리뷰 커뮤니티**
 
 
-## Page images
-#### Home
-![main](./images/home.png)
 
-#### Movie Modal
-![system-structure](./images/modal.png)
+</br>
 
-#### My Report
-![system-structure](./images/report.png)
+
+<div>
+<img src="./images/home.png" width="32%"/>
+<img src="./images/modal.png" width="32%"/>
+<img src="./images/report.png" width="32%"/>
+</div>
 
 
 
@@ -37,6 +34,7 @@ CINEMATER </br>
 AI HUB - 인공지능 웹 개발 트랙에서 진행한 프로젝트의 프론트엔드 파트를 담당하였다. 시스템 구조는 아래와 같다.
 
 ![system-structure](./images/system-structure.png)
+</br>
 
 기능은 다음과 같다.
 * 회원가입 / 로그인 / 카카오톡, 네이버 SNS 로그인
