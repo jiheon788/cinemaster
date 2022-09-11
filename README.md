@@ -6,7 +6,7 @@ CINEMATER </br>
 
 </h1>
 
-[바로가기](https://cinemaster-four.herokuapp.com/)
+[https://cinemaster-four.herokuapp.com/](https://cinemaster-four.herokuapp.com/)
 
 
 <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"/>  <img alt="ExpressJs" src="https://img.shields.io/badge/Express.js-A8B9CC?style=for-the-badge&logo=Node.js&logoColor=white"/>  <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="NodeJs" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/> 
