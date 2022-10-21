@@ -6,7 +6,10 @@ CINEMATER </br>
 
 </h1>
 
-[https://cinemaster-four.herokuapp.com/](https://cinemaster-four.herokuapp.com/)
+# [시네마스터 바로가기](https://cinemaster-four.herokuapp.com/)
+
+
+<u>heroku 무료 배포서버 특성상 다소 속도가 느릴 수 있습니다</u>
 
 
 <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"/>  <img alt="ExpressJs" src="https://img.shields.io/badge/Express.js-A8B9CC?style=for-the-badge&logo=Node.js&logoColor=white"/>  <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="NodeJs" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/> 
@@ -35,7 +38,7 @@ CINEMATER </br>
 
 
 ## 시스템 구조
-AI HUB - 인공지능 웹 개발 트랙에서 진행한 프로젝트의 프론트엔드 파트를 담당하였다. 시스템 구조는 아래와 같다.
+시네마스터 프로젝트의 프론트엔드 파트를 담당하였다. 시스템 구조는 아래와 같다.
 
 
 ![system-structure](./images/system-structure.png)
