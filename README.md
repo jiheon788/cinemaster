@@ -1,4 +1,4 @@
-# <img align="left" src="https://user-images.githubusercontent.com/90181028/206124268-708dfc4e-f7ad-488d-9659-f30fbaed4507.png" width="100px" /> CINEMASTER(시네마스터)
+# <img align="left" src="https://user-images.githubusercontent.com/90181028/206179126-d0784533-3d36-4e84-9355-9a1720f19dcb.png" width="100px" /> CINEMASTER(시네마스터)
 
 > 영화추천서비스 + 영화 리뷰 커뮤니티
 
