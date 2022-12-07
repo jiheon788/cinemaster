@@ -1,28 +1,34 @@
-# 영화 추천 커뮤니티 웹사이트 - 백엔드 
+<div align="center">
+
+# 시네마스터 - server
+
+</div>
+
+<div align="right">
+Author: @jisulee42  
+</div>
 
 ## :grin: 01. 중요 모듈
-|모듈|버전|
-|------|---|
-|ExpressJs|![Generic badge](https://img.shields.io/badge/version-4.18.1-green.svg)|
-|mongodb|![Generic badge](https://img.shields.io/badge/version-4.8.1-red.svg)|
-|mongoose|![Generic badge](https://img.shields.io/badge/version-6.4.5-blue.svg)|
 
-## :blush: 02. API 설계   
-* Rule
-    * Method tpye이 `get` 시, param 에 데이터 전송
-    * `get` tpye에 data 넣고 싶을 시 param에 넣거나 post 로 변경하여 body에 넣고 전송
+| 모듈      | 버전                                                                    |
+| --------- | ----------------------------------------------------------------------- |
+| ExpressJs | ![Generic badge](https://img.shields.io/badge/version-4.18.1-green.svg) |
+| mongodb   | ![Generic badge](https://img.shields.io/badge/version-4.8.1-red.svg)    |
+| mongoose  | ![Generic badge](https://img.shields.io/badge/version-6.4.5-blue.svg)   |
 
+## :blush: 02. API 설계
 
+- Rule
+  - Method tpye이 `get` 시, param 에 데이터 전송
+  - `get` tpye에 data 넣고 싶을 시 param에 넣거나 post 로 변경하여 body에 넣고 전송
 
-**a. 유저 : /user** 
+**a. 유저 : /user**
 |기능|Type|End point|Req|Response|
 |------|---|---|---|---|
 |로그인|POST|/signUp|{ </br>email: String, </br>password: String</br>}|{</br>result :“회원가입이 완료되었습니다”</br>}|
 |회원가입|POST|/signUp|{</br>email: String, </br>password:String, </br>name: String</br>}|{</br>result:"회원가입이 완료되었습니다."</br>}|
-|정보 조회|GET|/:shortId|-|{</br>"_id": String,</br>"email":String,</br>"name": String,</br>"type": String(local, naver, kakao),</br>"profileImg": String,</br>"shortId": String,</br>"createdAt": DateTime,</br>"updatedAt": DateTime,</br>"__v": Number</br>}|
+|정보 조회|GET|/:shortId|-|{</br>"\_id": String,</br>"email":String,</br>"name": String,</br>"type": String(local, naver, kakao),</br>"profileImg": String,</br>"shortId": String,</br>"createdAt": DateTime,</br>"updatedAt": DateTime,</br>"\_\_v": Number</br>}|
 |유저 정보 수정|POST|/update|{</br>shortId: String,</br>password: String, </br>name: String, </br>type: String(lcaol, naver, kakao)</br>}|{</br>result: "유저 정보가 수정되었습니다.”</br>}|
-
-
 
 **b. 영화 북마크 : /cart**
 |기능|Type|End point|Req|Response|
@@ -46,7 +52,7 @@
 **d-2. 유저 별 리뷰 : /review**
 |기능|Type|End point|Req|Response|
 |------|---|---|---|---|
-|유저별 리뷰  조회|GET|/user/:shortId|-|[</br>{</br>“movieId”: String,</br>“reviewId”: String, </br>“shortId”: String, </br>“author”: String, </br>“profileImg”: String, </br>“title”: String, </br>“content”: String, </br>“star”: String, </br>“createdAt”: Datetime, </br>“updatedAt”: Datetime, </br>“likeCount”: Number</br>}</br>]|
+|유저별 리뷰 조회|GET|/user/:shortId|-|[</br>{</br>“movieId”: String,</br>“reviewId”: String, </br>“shortId”: String, </br>“author”: String, </br>“profileImg”: String, </br>“title”: String, </br>“content”: String, </br>“star”: String, </br>“createdAt”: Datetime, </br>“updatedAt”: Datetime, </br>“likeCount”: Number</br>}</br>]|
 |작성된 리뷰 조회|GET|/find/:shortId/:reviewId|-|[</br>{</br>“movieId”: String,</br>“reviewId”: String, </br>“shortId”: String, </br>“author”: String, </br>“profileImg”: String, </br>“title”: String, </br>“content”: String, </br>“star”: String, </br>“createdAt”: Datetime, </br>“updatedAt”: Datetime, </br>“likeCount”: Number</br>}</br>]|
 |리뷰 작성|POST|/add|{</br>“shortId”: String,</br>“movieId”: String, </br>“title”: String, </br>“content”: String, </br>“genreList” : List(String)</br>}|{</br>result: “리뷰가 작성되었습니다.”</br>}|
 |리뷰 수정|POST|/update|{</br>“shortId”: String,</br>“movieId”: String,</br>“title”: String,</br>“content”: String</br>}|{</br>result: “리뷰가 수정되었습니다.”</br>}|
@@ -61,7 +67,7 @@
 |기능|Type|End point|Req|Response|
 |------|---|---|---|---|
 |평가할 데이터 랜덤 조회|GET|/:movieCount|-|{</br>movieNum : Number, </br>"result": List(Number)</br>}|
-|평가한 데이터 입력|POST|/|{</br>"shortId" : String, </br>"movieId" : String, </br>”star” : Number</br>}|{</br>"data": List(Object("movieId":String, "star":Number, "_id":String), </br>”result” : "별점 목록에 없던 영화라 추가 되었습니다.”</br>}|
+|평가한 데이터 입력|POST|/|{</br>"shortId" : String, </br>"movieId" : String, </br>”star” : Number</br>}|{</br>"data": List(Object("movieId":String, "star":Number, "\_id":String), </br>”result” : "별점 목록에 없던 영화라 추가 되었습니다.”</br>}|
 
 **g. 추천하기 : /recommendation**
 |기능|Type|End point|Req|Response|
@@ -75,6 +81,7 @@
 |장르 선호도 조회|GET|/prefer/:shortId|-|{</br>"success": Boolean,</br>"result": Object(cnt:Number, aver:Number, sum:Number, feq:Number), </br>"msg": "별점 평균, 별점 개수, 최빈 별점 조회에 성공 했습니다."</br>}|
 
 ## :smirk: 03. DB 설계
+
 ![image](https://user-images.githubusercontent.com/11794584/187949239-955da38b-dfd7-40cc-b007-19a28fd148c5.png)
 
 ![image](https://user-images.githubusercontent.com/11794584/188101783-c57cfae6-4cb9-43d4-966b-4f77d3181f6a.png)

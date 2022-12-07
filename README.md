@@ -2,31 +2,31 @@
 
 > 영화추천서비스 + 영화 리뷰 커뮤니티
 
-<div>
-<img src="./images/home.png" width="32%"/>
-<img src="./images/modal.png" width="32%"/>
-<img src="./images/report.png" width="28%"/>
+<div align='left'>
+<img src="./images/home.png" width="25%"/>
+<img src="./images/modal.png" width="25%"/>
+<img src="./images/report.png" width="22%"/>
 </div>
 
 # 🎞 CINEMASTER 소개
 
 > 영화추천서비스 + 영화 리뷰 커뮤니티
+
 - TMDB API를 활용한 웹 서비스 개발
 - 개발 기간: 2022.08.01 ~ 2022.08.25
 
-# 📑 INDEX
+# 📑 개발 문서 INDEX
 
-1. [FE](./1.JAVASCRIPT.md)
-2. [BE](./2.NETWORK.md)
-3. [RS](./3.DATASTRUCTURE.md)
-
+1. [FE](./fe/README.md)
+2. [BE](./be/README.md)
+3. [RS](./recommendation/README.md)
 
 # 👩🏻‍💻 TEAM
 
-| 박지헌      | 정영우    | 이지수      | 천현우          |
-| ----------- | --------- | --------- | --------------- |
+| 박지헌      | 정영우          | 이지수     | 천현우  |
+| ----------- | --------------- | ---------- | ------- |
 | @jiheon788  | @youngwoo-korea | @jisulee42 | @Hyyena |
-| FE / Design | PM / RS | BE / 배포 | BE / RS |
+| FE / Design | PM / RS         | BE / 배포  | BE / RS |
 
 # ✨ KEY FUNTIONS
 
@@ -38,10 +38,8 @@
 - [x] 리뷰 CRUD (별점 및 리뷰 추천기능)
 - [x] 영화검색
 
-
-
 # ⚙ SYSTEM STRUCTURE
+
 ![image](https://user-images.githubusercontent.com/90181028/206125875-a396628d-ed2b-47c1-9f74-79713d356ef8.png)
 
 </br>
-

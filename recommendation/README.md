@@ -1,4 +1,13 @@
-# 영화 추천 커뮤니티 웹 사이트 - 추천 시스템
+<div align="center">
+
+# 시네마스터 - 추천시스템
+
+</div>
+
+<div align="right">
+Author: @Hyyena  
+</div>  
+<br>
 
 <img src="https://img.shields.io/badge/Python-3.8-3776AB?style=flat&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/FastAPI-0.81.0-009688?style=flat&logo=FastAPI&logoColor=white"/> <img src="https://img.shields.io/badge/NumPy-1.23.2-013243?style=flat&logo=NumPy&logoColor=white"/> <img src="https://img.shields.io/badge/pandas-1.4.3-150458?style=flat&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/scikit--surprise-1.1.2-a4bdd0"/>
 
