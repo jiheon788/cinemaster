@@ -1,40 +1,47 @@
-<div align="center">
-<h1>
-CINEMATER </br>
-영화추천서비스 + 영화 리뷰 커뮤니티</br>
-</h1>
+# <img align="left" src="https://user-images.githubusercontent.com/90181028/206124268-708dfc4e-f7ad-488d-9659-f30fbaed4507.png" width="100px" /> CINEMASTER(시네마스터)
 
-<img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"/> <img alt="ExpressJs" src="https://img.shields.io/badge/Express.js-A8B9CC?style=for-the-badge&logo=Node.js&logoColor=white"/> <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/> <img alt="NodeJs" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/>
-
-| Github     | Part         |
-| ---------- | ------------ |
-| @jiheon788 | FE / DESIGN  |
-| @jisulee42 | BE / 배포    |
-| @Hyyena    | PM / BE / RS |
-
-</div>
-
-</br>
+> 영화추천서비스 + 영화 리뷰 커뮤니티
 
 <div>
 <img src="./images/home.png" width="32%"/>
 <img src="./images/modal.png" width="32%"/>
-<img src="./images/report.png" width="32%"/>
+<img src="./images/report.png" width="28%"/>
 </div>
 
-## 시스템 구조
+# 🎞 CINEMASTER 소개
 
-시네마스터 프로젝트의 프론트엔드 파트를 담당하였다. 시스템 구조는 아래와 같다.
+> 영화추천서비스 + 영화 리뷰 커뮤니티
+- TMDB API를 활용한 웹 서비스 개발
+- 개발 기간: 2022.08.01 ~ 2022.08.25
 
-![system-structure](./images/system-structure.png)
+# 📑 INDEX
+
+1. [FE](./1.JAVASCRIPT.md)
+2. [BE](./2.NETWORK.md)
+3. [RS](./3.DATASTRUCTURE.md)
+
+
+# 👩🏻‍💻 TEAM
+
+| 박지헌      | 정영우    | 이지수      | 천현우          |
+| ----------- | --------- | --------- | --------------- |
+| @jiheon788  | @youngwoo-korea | @jisulee42 | @Hyyena |
+| FE / Design | PM / RS | BE / 배포 | BE / RS |
+
+# ✨ KEY FUNTIONS
+
+- [x] 회원가입 / 로그인 / 카카오톡, 네이버 SNS 로그인
+- [x] 회원 프로필관리/ 작성리뷰 관리 / 찜기능
+- [x] 유저 작성 리뷰 기반 유저 취향 분석 레포트 기능 (별점분포도, 장르선호도 분석, 리뷰워드클라우드)
+- [x] 평가하기 - 평점기반 추천서비스
+- [x] 영화정보모달 (유튜브 트레일러, 영화정보, 장르기반추천 서비스, 유저기반추천 서비스)
+- [x] 리뷰 CRUD (별점 및 리뷰 추천기능)
+- [x] 영화검색
+
+
+
+# ⚙ SYSTEM STRUCTURE
+![image](https://user-images.githubusercontent.com/90181028/206125875-a396628d-ed2b-47c1-9f74-79713d356ef8.png)
+
 </br>
 
-기능은 다음과 같다.
-
-- 회원가입 / 로그인 / 카카오톡, 네이버 SNS 로그인
-- 회원 프로필관리/ 작성리뷰 관리 / 찜기능
-- 유저 작성 리뷰 기반 유저 취향 분석 레포트 기능 (별점분포도, 장르선호도 분석, 리뷰워드클라우드)
-- 평가하기 - 평점기반 추천서비스
-- 영화정보모달 (유튜브 트레일러, 영화정보, 장르기반추천 서비스, 유저기반추천 서비스)
-- 리뷰 CRUD (별점 및 리뷰 추천기능)
-- 영화검색
