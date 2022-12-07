@@ -6,11 +6,12 @@
 <img src="https://user-images.githubusercontent.com/90181028/206181453-7b72c4cd-fcc9-494e-84a7-61583f7261d2.png" width="33%"/>
 <img src="https://user-images.githubusercontent.com/90181028/206181472-2dc41582-5637-4cde-9df5-4af541999b10.png" width="33%"/>
 <img src="https://user-images.githubusercontent.com/90181028/206181488-59c13da1-34e4-4514-9539-19f27bf63f1c.png" width="30%"/>
+   
+<img src="https://user-images.githubusercontent.com/90181028/206187763-482c4e51-5530-485f-b7c2-a89ffffc606c.gif" width="49%"/>
+<img src="https://user-images.githubusercontent.com/90181028/206188963-b96c2950-8322-4b1f-bf5e-87332f299c6d.gif" width="49%"/>
+   
 </div>
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/90181028/206187763-482c4e51-5530-485f-b7c2-a89ffffc606c.gif)
-
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/90181028/206188963-b96c2950-8322-4b1f-bf5e-87332f299c6d.gif)
 
 # 🎞 CINEMASTER 소개
 
