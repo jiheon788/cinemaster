@@ -1,6 +1,6 @@
 <div align="center">
 
-# 시네마스터 - cliet
+# 시네마스터 - client
 
 </div>
 
