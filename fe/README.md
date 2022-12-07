@@ -1,6 +1,6 @@
 <div align="center">
 
-# 시네마스터 - clinet
+# 시네마스터 - cliet
 
 </div>
 
