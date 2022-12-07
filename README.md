@@ -3,9 +3,9 @@
 > 영화추천서비스 + 영화 리뷰 커뮤니티
 
 <div align='left'>
-<img src="./images/home.png" width="25%"/>
-<img src="./images/modal.png" width="25%"/>
-<img src="./images/report.png" width="22%"/>
+<img src="./images/home.png" width="33%"/>
+<img src="./images/modal.png" width="33%"/>
+<img src="./images/report.png" width="30%"/>
 </div>
 
 # 🎞 CINEMASTER 소개
