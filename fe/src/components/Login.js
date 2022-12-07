@@ -11,11 +11,14 @@ import Swal from 'sweetalert2'
 
 
 const Login = () => {
-  useEffect(() => {
-    $(".message span").click(function () {
-      $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
-    });
-  }, []);
+  // useEffect(() => {
+  //   $(".message span").click(function () {
+  //   });
+  // }, []);
+
+  const onToggleSign = () => {
+    $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+  }
   
   //----------------------------- 공통 -----------------------------//
   const navigate = useNavigate();
@@ -244,7 +247,7 @@ const Login = () => {
 
               <p className="message">
                 Not registered?{" "}
-                <span>
+                <span onClick={onToggleSign}>
                   <strong>Create an account</strong>
                 </span>
               </p>
@@ -320,7 +323,7 @@ const Login = () => {
               </button>
               <p className="message">
                 Already registered?{" "}
-                <span>
+                <span onClick={onToggleSign}>
                   <strong>Sign In</strong>
                 </span>
               </p>

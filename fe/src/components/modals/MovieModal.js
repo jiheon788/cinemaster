@@ -1,12 +1,19 @@
 import Modal from "react-modal";
-import { useEffect, useState } from "react";
-import GetRecommendations from "./contents/GetRecommendations";
-import GetSimilarMovies from "./contents/GetSimilarMovies";
-import Reviews from "./contents/Reviews";
+import { useState } from "react";
 import $ from "jquery";
-import MovieTrailer from "./contents/MovieTrailer";
-import MovieIntroduction from "./contents/MovieIntroduction";
 import { useNavigate } from "react-router-dom";
+import React, { lazy, Suspense } from 'react';
+
+const GetRecommendations = lazy(() => import('./contents/GetRecommendations'));
+const GetSimilarMovies = lazy(() => import('./contents/GetSimilarMovies'));
+const Reviews = lazy(() => import('./contents/Reviews'));
+const MovieTrailer = lazy(() => import('./contents/MovieTrailer'));
+const MovieIntroduction = lazy(() => import('./contents/MovieIntroduction'));
+
+
+
+const renderLoader = () => <p>Loading</p>;
+
 
 Modal.setAppElement("#root");
 
@@ -51,6 +58,8 @@ const MovieModal = ({ isOpen, setOpen, movie_id }) => {
       }}
       style={customStyles}
     >
+      <Suspense fallback={renderLoader()}>
+      
       <MovieTrailer movieId={movieId} />
       <div className="modal-box">
         <MovieIntroduction movieId={movieId} />
@@ -70,6 +79,9 @@ const MovieModal = ({ isOpen, setOpen, movie_id }) => {
         </h1>
         <Reviews movieId={movieId} />
       </div>
+      </Suspense>
+
+      
     </Modal>
   );
 };
