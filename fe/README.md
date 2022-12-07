@@ -1,12 +1,38 @@
-<div align="center">
+# <img align="left" src="https://user-images.githubusercontent.com/90181028/206179126-d0784533-3d36-4e84-9355-9a1720f19dcb.png" width="100px" /> CINEMASTER(시네마스터)
 
-# 시네마스터 - client
+> 시네마스터 - client
 
+<div align='left'>
+<img src="https://user-images.githubusercontent.com/90181028/206181453-7b72c4cd-fcc9-494e-84a7-61583f7261d2.png" width="33%"/>
+<img src="https://user-images.githubusercontent.com/90181028/206181472-2dc41582-5637-4cde-9df5-4af541999b10.png" width="33%"/>
+<img src="https://user-images.githubusercontent.com/90181028/206181488-59c13da1-34e4-4514-9539-19f27bf63f1c.png" width="30%"/>
 </div>
 
-<div align="right">
-Author: @jiheon788  
-</div>
+# 🎞 CINEMASTER 소개
+
+> 영화추천서비스 + 영화 리뷰 커뮤니티
+
+- TMDB API를 활용한 웹 서비스 개발
+- 개발 기간: 2022.08.01 ~ 2022.08.25
+
+# 👩🏻‍💻 TEAM
+
+| 박지헌      | 정영우          | 이지수     | 천현우  |
+| ----------- | --------------- | ---------- | ------- |
+| @jiheon788  | @youngwoo-korea | @jisulee42 | @Hyyena |
+| FE / Design | PM / RS         | BE / 배포  | BE / RS |
+
+# ✨ KEY FUNTIONS
+
+- [x] 회원가입 / 로그인 / 카카오톡, 네이버 SNS 로그인
+- [x] 회원 프로필관리/ 작성리뷰 관리 / 찜기능
+- [x] 유저 작성 리뷰 기반 유저 취향 분석 레포트 기능 (별점분포도, 장르선호도 분석, 리뷰워드클라우드)
+- [x] 평가하기 - 평점기반 추천서비스
+- [x] 영화정보모달 (유튜브 트레일러, 영화정보, 장르기반추천 서비스, 유저기반추천 서비스)
+- [x] 리뷰 CRUD (별점 및 리뷰 추천기능)
+- [x] 영화검색
+
+</br>
 
 # 📑 INDEX
 
@@ -32,7 +58,6 @@ Author: @jiheon788
 영화 산업은 발전하고, 영화에 대한 추천 및 리뷰를 남길 수 있는 사이트는 무수히 많지만 구독경제를 통한 OTT 플랫폼이 대다수였고, 무료로 영화에 대한 정보를 교류할 수 있는 공간은 카카오, 네이버의 댓글을 통한 부속 서비스 뿐이였다. 해당 상황을 보며 누구나 자유롭게 무료로 이용할 수 있으며, 디자인적으로도 우수한 영화 리뷰 & 추천 플랫폼을 개발하기로 하였다.
 
 # 2. 설계
-
 ![image](https://user-images.githubusercontent.com/90181028/206125875-a396628d-ed2b-47c1-9f74-79713d356ef8.png)
 
 # 3. 디자인 과정
@@ -42,7 +67,6 @@ Author: @jiheon788
 
 ## 3.2. Design Concept
 
-영화관의 느낌을 가장 잘 주는 것이 블랙에 레드계열의 포인트 색깔을 떠올렸다. 하지만 기존의 영화 브랜드(e.g. CGV 등)의 이미지가 강하기에 조금씩 칼라의 변화를 주었다(위 스타일 가이드 참고)  
 영화의 정보는 페이지 이동보다는 `모달`을 선택함으로써 SPA의 성격을 좀 더 살리며 깔끔한 느낌을 주고자 하였다. 모달은 메인화면 위에 팝업처럼 떠있는 창을 말한다. 모달은 메인 화면이 뒤에 보이기만하고 사용할 수 없는 모드를 만들기 때문에 모달에 있는 정보에 사용자를 집중시키기에 좋다.
 
 모달윈도우는 두 가지 유형이 있다. 
