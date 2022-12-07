@@ -8,6 +8,10 @@
 <img src="https://user-images.githubusercontent.com/90181028/206181488-59c13da1-34e4-4514-9539-19f27bf63f1c.png" width="30%"/>
 </div>
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/90181028/206187763-482c4e51-5530-485f-b7c2-a89ffffc606c.gif)
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/90181028/206188963-b96c2950-8322-4b1f-bf5e-87332f299c6d.gif)
+
 # 🎞 CINEMASTER 소개
 
 > 영화추천서비스 + 영화 리뷰 커뮤니티
