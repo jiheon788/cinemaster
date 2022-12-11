@@ -52,8 +52,6 @@ const GetRecommendations = ({movieId, setMovieId})=>{
       <Carousel
         responsive={responsive}
         // autoPlay={movies.deviceType !== "mobile" ? true : false}
-        autoPlay={true}
-        autoPlaySpeed={5000}
         infinite={true}
       > 
         {

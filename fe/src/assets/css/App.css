@@ -1,8 +1,8 @@
 @import "./reset.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap");
 
 html,
 body {
@@ -11,7 +11,7 @@ body {
   background-color: #1c1c1c;
   color: white !important;
   /* font-family: "Roboto", sans-serif; */
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 .root {
   position: absolute;
@@ -32,13 +32,11 @@ body {
 }
 
 .loading-box {
-  position: absolute;
-  width: 400px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  margin: -150px 0px 0px -200px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #profile-image-small {
@@ -102,10 +100,9 @@ body {
   align-items: center;
   transition: 0.1s;
 }
-.nav-logo:hover{
+.nav-logo:hover {
   /* color:#d44179; */
   text-shadow: 0px 0px 30px rgba(234, 76, 136, 0.8);
-
 }
 .pointer {
   cursor: pointer;
@@ -229,7 +226,7 @@ body {
   padding: 32px 0;
   color: white;
 }
-.score-report{
+.score-report {
   border: solid #595959 2px;
   padding: 10px 20px;
   border-radius: 10px;
@@ -243,16 +240,15 @@ body {
   background-position: center;
 }
 .banner-cover {
-  background-color: rgba(18, 18, 18, .4);
+  background-color: rgba(18, 18, 18, 0.4);
   height: 600px;
   align-items: center;
   display: flex;
   justify-content: space-between;
   backdrop-filter: blur(15px);
-
 }
 
-.banner-card{
+.banner-card {
   display: flex;
   background-size: cover;
   width: 308px;
@@ -265,7 +261,7 @@ body {
   /* z-index: 1; */
 }
 
-.banner-card:hover{
+.banner-card:hover {
   transform: scale(1.1);
 }
 
@@ -280,38 +276,37 @@ body {
   color: #ccc;
   font-size: 180px;
   position: relative;
-  right:200px;
-  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  right: 200px;
+  font-family: "Alumni Sans Collegiate One", sans-serif;
   z-index: -1;
   top: 200px;
 }
 
 .rank-card {
   text-align: right;
-  margin:30px 100px;
+  margin: 30px 100px;
   width: 220px;
   height: 330px;
-  transition: all 0.2s linear;
+  transition: all 0.25s linear;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 10px;
 }
 
-.rank-card:hover{
+.rank-card:hover {
   transform: scale(1.1);
 }
 
 .card {
-  margin:15px 10px;
+  margin: 15px 10px;
   width: 220px;
   height: 330px;
-  transition: all 0.1s linear;
+  transition: all 0.25s linear;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 10px;
 }
 
 .card:hover {
   transform: scale(1.1);
-  border-radius: 10px;
 }
 .card img {
   margin: 10px;
@@ -324,13 +319,13 @@ body {
   height: 580px;
   background: linear-gradient(to bottom, black 85%, #181818 100%);
 }
-.flex-box-left{
+.flex-box-left {
   display: flex;
   align-items: center;
-  justify-content:left;
+  justify-content: left;
 }
 
-.flex-box{
+.flex-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -372,7 +367,6 @@ body {
   overflow: hidden;
   pointer-events: none;
 }
-
 
 .review-create-btn {
   border: dashed 3px #a7a7a7;
@@ -473,7 +467,7 @@ body {
   transition: 0.1s;
 }
 
-.menu-item:hover{
+.menu-item:hover {
   color: #ea4c88;
 }
 
@@ -484,7 +478,7 @@ body {
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
-  margin-top : 150px
+  margin-top: 150px;
 }
 
 .eval-container {
@@ -534,8 +528,8 @@ body {
   transform: translateY(50%);
 }
 
-.search-result{
-  display: flex; 
+.search-result {
+  display: flex;
   align-items: center;
   cursor: pointer;
 }
