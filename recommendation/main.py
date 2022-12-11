@@ -1,5 +1,8 @@
 from typing import List, Union
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 from pymongo import MongoClient
 from pydantic import BaseModel
 from starlette.middleware.cors import CORSMiddleware
@@ -41,7 +44,7 @@ algo.fit(train_set)
 
 class Movies(BaseModel):
     movieId: str
-    star: float
+    rating: float
 
 
 class Item(BaseModel):
@@ -52,10 +55,13 @@ class Item(BaseModel):
 app = FastAPI()
 
 # cors 해결
-origins = [
-    "https://cinemaster-four.herokuapp.com",
-    "https://cinemaster-four.herokuapp.com:5000"
-]
+# origins = [
+#     "https://cinemaster-four.herokuapp.com",
+#     "https://cinemaster-four.herokuapp.com:5000",
+
+# ]
+
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -76,8 +82,16 @@ db = client.cinema
 print(db)
 print(db.users)
 
-
+##
 # 유저별 추천 영화 목록 조회
+##
+
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+
 @app.get(
     "/recommendation/{shortId}",
     responses={
@@ -108,18 +122,16 @@ print(db.users)
 )
 async def recommend_movie(shortId: str):
     recommends = db.recommends
-
     auth_data = db.users.find_one({"shortId": shortId}, {"_id": 0})
-    print(auth_data)
+    print("111 : ", auth_data)
 
     if not auth_data:
         raise HTTPException(status_code=404, detail="User not found")
 
     recommend_data = recommends.find_one({"userRef": auth_data})
-
+    print("222 : ", recommend_data)
     if not recommend_data:
-        result = {"result": "추천 영화 목록 조회 실패"}
-        return result
+        return JSONResponse(content={"result": "추천 영화 목록 조회 실패"})
     else:
         # recommends collection에서 랜덤 데이터 추출
         pipeline = [
@@ -134,10 +146,18 @@ async def recommend_movie(shortId: str):
         for data in random_data:
             result.append(data["recommendList"])
 
-    return {"recommendList": result}
+        result = jsonable_encoder(result)
 
+    print(type(JSONResponse(content={"recommendList": result})))
+    print(JSONResponse(result))
+    # return {"recommendList": result}
+    return JSONResponse(content={"recommendList": result})
 
+##
 # 평가할 영화 랜덤 조회
+##
+
+
 @app.get(
     "/eval/{movieCount}",
     responses={
@@ -178,13 +198,22 @@ async def random_movie(movieCount: int):
 
     result = []
     for movieId in movie_id:
-        dict = {"movieId": movieId}
-        result.append(dict)
+        # dict = {"movieId": movieId}
+        # result.append(dict)
+        result.append(movieId)
 
-    return {"movieNum": movieCount, "result": result}
+    print(result)
 
+    result = jsonable_encoder(result)
 
+    # return {"movieNum": movieCount, "result": result}
+    return JSONResponse(content={"movieNum": movieCount, "result": result})
+
+##
 # 평가 데이터 저장
+##
+
+
 @app.post(
     "/eval",
     responses={
@@ -224,16 +253,19 @@ async def write_movie(item: Item):
         raise HTTPException(status_code=404, detail="User not found")
 
     movie_arr = []
-    star_arr = []
+    rating_arr = []
 
     # 빈 배열에 요청 받은 영화 ID와 평점을 저장
     for movie in item.movieList:
         movie_arr.append(movie.movieId)
-        star_arr.append(movie.star)
+        rating_arr.append(movie.rating)
+
+    print(movie_arr)
+    print(rating_arr)
 
     # 영화 ID와 평점 배열을 DataFrame으로 변환
     df = pd.DataFrame(
-        {"userId": short_id, "movieId": movie_arr, "rating": star_arr})
+        {"userId": short_id, "movieId": movie_arr, "rating": rating_arr})
 
     # 변환한 DataFrame을 기존 DataFrame에 추가
     new_df = ratings.append(df, ignore_index=True)
@@ -242,9 +274,11 @@ async def write_movie(item: Item):
     new_df.to_csv("data/ratings_small.csv", index=False)
 
     result = []
-    for movie_id, star in zip(movie_arr, star_arr):
-        dict = {"movieId": movie_id, "star": star}
+    for movie_id, rating in zip(movie_arr, rating_arr):
+        dict = {"movieId": movie_id, "star": rating}
         result.append(dict)
+
+    print(result)
 
     recommends = db.recommends
 
@@ -262,7 +296,7 @@ async def write_movie(item: Item):
         recommend_list.append(dict)
     # print(recommend_list)
     # ----------------------------------------
-
+    print("recommend_list : ", recommend_list)
     # document create & update
     recommends.find_one_and_update(
         {"userRef": auth_data},
@@ -270,8 +304,10 @@ async def write_movie(item: Item):
         upsert=True
     )
 
-    return {"shortId": short_id, "result": result}
-
+    result = jsonable_encoder(result)
+    print("result", result)
+    # return {"shortId": short_id, "result": result}
+    return JSONResponse(content={"shortId": short_id, "result": result})
 
 # if __name__ == "__main__":
 #     import uvicorn

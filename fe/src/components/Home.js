@@ -22,11 +22,12 @@ const Home = () => {
     dispatch(movieAction.getMovies());
 
     /*
-     * 추천 영화 목록 서버에서 가져오기
+     * 추천 영화 목록 서버에서 가져오기!
      */
     if (cookies.userData) {
       recommendMovieListLoad().then((res) => {
-        res.data.movieList.map((x) => {
+        console.log(res.data);
+        res.data.recommendList.map((x) => {
           /*
            * API 서버에서 영화 데이터 가져오기
            */
@@ -44,13 +45,13 @@ const Home = () => {
 
   const recommendMovieListLoad = async () => {
     return await axios.get(
-      `${process.env.REACT_APP_SERVER_URL}/recommend/${cookies.userData.shortId}`
+      `${process.env.REACT_APP_PYTHON_SERVER_URL}/recommendation/${cookies.userData.shortId}`,
     );
   };
 
   const recommendMovieListTmdbLoad = async (movie_id) => {
     return await axios.get(
-      `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`,
     );
   };
 
