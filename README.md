@@ -1,55 +1,62 @@
 # <img align="left" src="https://user-images.githubusercontent.com/90181028/206179126-d0784533-3d36-4e84-9355-9a1720f19dcb.png" width="100px" /> CINEMASTER(시네마스터)
 
-> 시네마스터 - client
+> 영화추천서비스 + 영화 리뷰 커뮤니티
+
+# 📑 INDEX
+
+1. [INTRODUCTION](#1-introduction)
+
+2. [TEAM](#2-team)
+
+3. [KEY FUNTIONS](#3-key-functions)
+
+4. [배경](#4-배경)
+
+5. [설계](#5-설계)
+
+6. [디자인](#6-디자인)
+
+7. [DEMO](#7-demo)
+---
 
 
-
-
-# 🎞 CINEMASTER 소개
+# 1. INTRODUCTION
 
 > 영화추천서비스 + 영화 리뷰 커뮤니티
 
 - TMDB API를 활용한 웹 서비스 개발
 - 개발 기간: 2022.08.01 ~ 2022.08.25
 
-# 👩🏻‍💻 TEAM
+# 2. TEAM
 
 | 박지헌      | 정영우          | 이지수     | 천현우  |
 | ----------- | --------------- | ---------- | ------- |
 | @jiheon788  | @youngwoo-korea | @jisulee42 | @Hyyena |
 | FE / Design | PM / RS         | BE / 배포  | BE / RS |
 
-# ✨ KEY FUNTIONS
+# 3. KEY FUNCTIONS
 
-- [x] 회원가입 / 로그인 / 카카오톡, 네이버 SNS 로그인
-- [x] 회원 프로필관리/ 작성리뷰 관리 / 찜기능
-- [x] 유저 작성 리뷰 기반 유저 취향 분석 레포트 기능 (별점분포도, 장르선호도 분석, 리뷰워드클라우드)
-- [x] 평가하기 - 평점기반 추천서비스
-- [x] 영화정보모달 (유튜브 트레일러, 영화정보, 장르기반추천 서비스, 유저기반추천 서비스)
-- [x] 리뷰 CRUD (별점 및 리뷰 추천기능)
-- [x] 영화검색
+- [x] `유저관리(User)`: 로그인, 회원가입, 소셜로그인
+- [x] `개인관리(Individual)`: 프로필관리, 작성리뷰관리, 찜 기능
+- [x] `리포트(Report)`: 유저 취향 분석 레포트 기능 
+- [x] `영화정보모달(Modal)`: 유튜브 트레일러, 영화정보, 영화검색
+- [x] `영화리뷰(Review)`: 리뷰작성, 수정, 삭제, 조회, 별점, 리뷰추천
+- [x] `추천(Recommendation)`: 평점기반, 유저기반, 장르기반 추천서비스
+
 
 </br>
 
-# 📑 INDEX
 
-1. [배경](#1-배경)
 
-2. [설계](#2-설계)
-
-3. [디자인](#3-디자인)
-
-4. [DEMO](#4-demo)
----
-
-# 1. 배경
+# 4. 배경
 
 영화 산업은 발전하고, 영화에 대한 추천 및 리뷰를 남길 수 있는 사이트는 무수히 많지만 구독경제를 통한 OTT 플랫폼이 대다수였고, 무료로 영화에 대한 정보를 교류할 수 있는 공간은 카카오, 네이버의 댓글을 통한 부속 서비스 뿐이였다. 해당 상황을 보며 누구나 자유롭게 무료로 이용할 수 있으며, 디자인적으로도 우수한 영화 리뷰 & 추천 플랫폼을 개발하기로 하였다.
 
-# 2. 설계
+
+# 5. 설계
 ![image](https://user-images.githubusercontent.com/90181028/206125875-a396628d-ed2b-47c1-9f74-79713d356ef8.png)
 
-# 3. 디자인
+# 6. 디자인
 
 ![image](https://user-images.githubusercontent.com/90181028/206130029-171b8cb3-d679-456e-a331-3327b024302c.png)
 
@@ -64,7 +71,7 @@
 
 ![image](https://user-images.githubusercontent.com/90181028/206133259-b6198326-a950-44e3-8e7a-584d3187d0a5.png)
 
-# 4. DEMO
+# 7. DEMO
 
 <div align='left'>
 <img src="https://user-images.githubusercontent.com/90181028/206181453-7b72c4cd-fcc9-494e-84a7-61583f7261d2.png" width="33%"/>
