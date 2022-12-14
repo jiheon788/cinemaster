@@ -2,6 +2,9 @@
 
 > 영화추천서비스 + 영화 리뷰 커뮤니티
 
+![013](https://user-images.githubusercontent.com/90181028/207554117-1332ed62-34a9-4a18-8718-2a6a744fcef9.png)
+
+
 # 📑 INDEX
 
 1. [INTRODUCTION](#1-introduction)
@@ -58,7 +61,6 @@
 
 # 6. 디자인
 
-![image](https://user-images.githubusercontent.com/90181028/206130029-171b8cb3-d679-456e-a331-3327b024302c.png)
 
 영화의 정보는 페이지 이동보다는 `모달`을 선택함으로써 SPA의 성격을 좀 더 살리며 깔끔한 느낌을 주고자 하였다. 모달은 메인화면 위에 팝업처럼 떠있는 창을 말한다. 모달은 메인 화면이 뒤에 보이기만하고 사용할 수 없는 모드를 만들기 때문에 모달에 있는 정보에 사용자를 집중시키기에 좋다.
 
@@ -67,9 +69,11 @@
 - 사용자에 의해 유발: 사용자의 행동으로 발생하기에 사용자가 왜 그 윈도우가 나타났는지 알고있다.
 - 시스템에 의해 유발: 사용자가 하고 있던 작업을 방해함, 오류메시지로 모달은 적합하지 않다.
 
-시네마스터는 전자의 모달을 사용함으로써 사용자의 시선을 집중 시킬수 있게 하였다.  
+시네마스터는 전자의 모달을 사용함으로써 사용자의 시선을 집중 시킬수 있게 하였다.
+![image](https://user-images.githubusercontent.com/90181028/206130029-171b8cb3-d679-456e-a331-3327b024302c.png)
 
-![image](https://user-images.githubusercontent.com/90181028/206133259-b6198326-a950-44e3-8e7a-584d3187d0a5.png)
+![010](https://user-images.githubusercontent.com/90181028/207553904-9b7aab51-1b33-4f34-830e-d75ecd3ff4e0.png)
+
 
 # 7. DEMO
 
