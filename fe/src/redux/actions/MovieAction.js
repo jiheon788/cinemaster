@@ -1,31 +1,14 @@
-import apiClient from "../../lib/apis/tmdb";
-
-const API_KEY = process.env.REACT_APP_API_KEY;
+import { getPopularMovies, getTopRatedMovies, getUpComingMovies, getGenreMovies } from "../../lib/api/tmdb"
 
 function getMovies() {
   return async (dispatch) => {
     try {
       dispatch({ type: "GET_MOVIES_REQUEST" });
-      const popularMovieApi = apiClient.get(
-        `/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
-      );
-      const topRatedApi = apiClient.get(
-        `movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
-      );
-      const upComingApi = apiClient.get(
-        `/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
-      );
-      const genreApi = apiClient.get(
-        `genre/movie/list?api_key=${API_KEY}&language=en-US`
-      );
-
-      //
-      let [popularMovies, topRatedMovies, upComingMovies, genreList] =
+      let [popularMovies, topRatedMovies, upComingMovies] =
         await Promise.all([
-          popularMovieApi,
-          topRatedApi,
-          upComingApi,
-          genreApi,
+          getPopularMovies,
+          getTopRatedMovies,
+          getUpComingMovies,
         ]);
       dispatch({
         type: "GET_MOVIES_SUCCESS",
@@ -33,7 +16,6 @@ function getMovies() {
           popularMovies: popularMovies.data,
           topRatedMovies: topRatedMovies.data,
           upComingMovies: upComingMovies.data,
-          genreList: genreList.data.genres,
         },
       });
     } catch (error) {
@@ -46,33 +28,19 @@ function getAllMovies() {
   return async (dispatch) => {
     try {
       dispatch({ type: "GET_ALL_MOVIES_REQUEST" });
-      const popularMovieApi = apiClient.get(
-        `/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
-      );
-      const topRatedApi = apiClient.get(
-        `movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
-      );
-      const upComingApi = apiClient.get(
-        `/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
-      );
 
-      //
       let [popularMovies, topRatedMovies, upComingMovies] = await Promise.all([
-        popularMovieApi,
-        topRatedApi,
-        upComingApi,
+        getPopularMovies,
+        getTopRatedMovies,
+        getUpComingMovies,
       ]);
-
+      
       const arr = [
         ...popularMovies.data.results,
         ...topRatedMovies.data.results,
         ...upComingMovies.data.results,
       ];
 
-      /*
-       * popularMovies, topRatedMovies, upComingMovies 겹치는 ID존재해서
-       * 중복 제거 함
-       */
       var allMovies = [];
       var flag = true;
       for (var i = 0; i < arr.length; i++) {
@@ -88,11 +56,11 @@ function getAllMovies() {
           allMovies.push(arr[i]);
         }
       }
-      //develop-sense.tistory.com/entry/JavaScript-배열-key-중복-제거-ft동일-키-배열-합치기 [특별한 일상:티스토리]
+      
       dispatch({
         type: "GET_ALL_MOVIES_SUCCESS",
         payload: {
-          allMovies: allMovies,
+          allMovies
         },
       });
     } catch (error) {
