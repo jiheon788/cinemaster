@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import $ from "jquery";
 import axios from "axios";
+import { getMovieInfoByMovieId } from "../../../../lib/api/tmdb";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -26,29 +27,24 @@ const Create = ({
   // useEffect(()=>{
   //   console.log(createReview);
   // }, [createReview]);
-
-  useEffect(()=>{
-    getGenresByMovieId(movieId)
-  },[])
-  
   let genresArr = []
 
-  const getGenresByMovieId = (mId) => {
-    axios.get(
-      `https://api.themoviedb.org/3/movie/${mId}?api_key=${API_KEY}&language=en-US`).then(res=>{
-        return res.data.genres
-      }).then(res=>{
-        res.map((genre)=>{
-          genresArr.push(genre.name)
-        })
-        setCreateReview({
-          ...createReview,
-          genreList: genresArr,
-        });
-      }).catch(err=>{
-        console.log(err)     
+  useEffect(()=>{
+    getMovieInfoByMovieId(movieId).then(res => {
+      res.data.genres.map((genre)=>{
+        genresArr.push(genre.name)
       })
-  };
+      setCreateReview({
+        ...createReview,
+        genreList: genresArr,
+      });
+    }).catch(err=>{
+      console.log(err)     
+    })
+  }, [])
+  
+
+  
 
   const onChangeCreateReview = (event) => {
     // value 값에 따라 별 색칠

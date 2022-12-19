@@ -1,12 +1,8 @@
-import Modal from 'react-modal';
 import { useEffect, useState } from 'react';
-import axios from "axios";
 import MovieCardInModal from './../../MovieCardInModal'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-const API_KEY = process.env.REACT_APP_API_KEY;
-
+import { getSimilarMovies } from '../../../lib/api/tmdb';
 
 
 const responsive = {
@@ -35,23 +31,15 @@ const GetSimilarMovies = ({movieId, setMovieId})=>{
   const [rcmdMovies, setRcmdMovies] = useState([])
 
   useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=${API_KEY}&language=en-US&page=1`).then(res=>{
-      setRcmdMovies(res.data.results)
-    }).catch(err=>{console.log(err)})
-  },[])
-
-  useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=${API_KEY}&language=en-US&page=1`).then(res=>{
+    getSimilarMovies(movieId).then(res=>{
       setRcmdMovies(res.data.results)
     }).catch(err=>{console.log(err)})
   },[movieId])
-
 
   return (
     <div>
       <Carousel
         responsive={responsive}
-        // autoPlay={movies.deviceType !== "mobile" ? true : false}
       > 
         {
           rcmdMovies.map((movie, index)=>{

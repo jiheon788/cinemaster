@@ -1,25 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { getTrailerByMovieId } from "../../../lib/api/tmdb";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 const MovieTrailer = ({movieId})=>{
   const [trailerKey, setTrailerKey] = useState("");
-
-  useEffect(() => {
-    console.log(1)
-    getTrailerByMovieId(movieId)
-  }, []);
   
   useEffect(() => {
-    console.log(2)
-
-    getTrailerByMovieId(movieId)
-  }, [movieId]);
-
-  const getTrailerByMovieId = (mId) => {
-    axios.get(`https://api.themoviedb.org/3/movie/${mId}/videos?api_key=${API_KEY}&language=en-US`
-    ).then((res) => {
+    getTrailerByMovieId(movieId).then((res) => {
       res.data.results.map((video) => {
         if (video.type == "Trailer") {
           setTrailerKey(video.key);
@@ -28,9 +17,7 @@ const MovieTrailer = ({movieId})=>{
     }).catch((err) => {
         console.log(err);
     });
-  }
-
-  
+  }, [movieId]);
 
   let youtubeUrl = `https://www.youtube.com/embed/${trailerKey}?autoplay=1&mute=1&loop=1&controls=0&playlist=${trailerKey}`;
   

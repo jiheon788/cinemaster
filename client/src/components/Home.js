@@ -8,7 +8,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import "./../assets/css/App.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { getMovieInfoByMovieId } from "../lib/api/tmdb";
 const Home = () => {
   const navigate = useNavigate();
   const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
@@ -31,7 +31,7 @@ const Home = () => {
           /*
            * API 서버에서 영화 데이터 가져오기
            */
-          recommendMovieListTmdbLoad(x.movieId)
+          getMovieInfoByMovieId(x.movieId)
             .then((res2) => {
               setRecommendList((apidata) => [...apidata, res2.data]);
             })
@@ -46,12 +46,6 @@ const Home = () => {
   const recommendMovieListLoad = async () => {
     return await axios.get(
       `${process.env.REACT_APP_PYTHON_SERVER_URL}/recommendation/${cookies.userData.shortId}`,
-    );
-  };
-
-  const recommendMovieListTmdbLoad = async (movie_id) => {
-    return await axios.get(
-      `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`,
     );
   };
 

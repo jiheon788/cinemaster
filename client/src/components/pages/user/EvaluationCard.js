@@ -3,7 +3,7 @@ import $ from "jquery";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import { findDOMNode } from "react-dom";
-
+import { getMovieInfoByMovieId } from "../../../lib/api/tmdb";
 const API_KEY = "637131b35fda1dc6c125beada1dd5b9d";
 
 const IMAGE_URL = "https://www.themoviedb.org/t/p/w220_and_h330_face";
@@ -19,7 +19,12 @@ const EvaluationCard = ({ movieId, movieList, setMovieList }) => {
   });
 
   useEffect(() => {
-    getMovieInfoByMovieId(movieId);
+    getMovieInfoByMovieId(movieId).then((res) => {
+      setMovieInfo(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
     movieList.push({ movieId: String(movieId), rating: 0 });
     // setMovieList([...movieList, movieId]);
   }, []);
@@ -35,18 +40,7 @@ const EvaluationCard = ({ movieId, movieList, setMovieList }) => {
     );
   }, [form]);
 
-  const getMovieInfoByMovieId = (movie_id) => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`
-      )
-      .then((res) => {
-        setMovieInfo(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+
 
   const onChangeForm = (event) => {
     // value 값에 따라 별 색칠

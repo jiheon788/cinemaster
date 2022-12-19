@@ -4,27 +4,18 @@ import { useCookies } from "react-cookie";
 import $ from "jquery";
 import MovieModal from "../../modals/MovieModal";
 import emptyBox from "./../../../assets/images/empty.png";
-const API_KEY = process.env.REACT_APP_API_KEY;
+import { getMovieInfoByMovieId } from "../../../lib/api/tmdb";
 
 const MyMovieCard = ({ movieId }) => {
   const [movieInfo, setMovieInfo] = useState([]);
   const [isOpen, setOpen] = useState(false);
 
-  const getMovieInfoById = (movie_id) => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`
-      )
-      .then((res) => {
-        setMovieInfo(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   useEffect(() => {
-    getMovieInfoById(movieId);
+    getMovieInfoByMovieId(movieId).then((res) => {
+      setMovieInfo(res.data);
+    }).catch((err) => {
+      console.log(err);
+    });
   }, []);
 
   return (

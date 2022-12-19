@@ -1,28 +1,18 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import BookMark from "./BookMark";
-
-const API_KEY = process.env.REACT_APP_API_KEY;
+import { getMovieInfoByMovieId } from "../../../lib/api/tmdb";
 
 const MovieIntroduction = ({movieId})=>{
   const [movieInfo, setMovieInfo] = useState({});
-
+  
   useEffect(()=>{
-    getMovieInfoByMovieId(movieId)
-  },[])
-  useEffect(()=>{
-    getMovieInfoByMovieId(movieId)
+    getMovieInfoByMovieId(movieId).then(res => {
+      setMovieInfo(res.data)
+    }).catch(err => {
+      console.log(err)     
+    })
   },[movieId])
 
-  const getMovieInfoByMovieId = (mId) => {
-    axios.get(
-      `https://api.themoviedb.org/3/movie/${mId}?api_key=${API_KEY}&language=en-US`).then(res=>{
-        setMovieInfo(res.data)
-      }).catch(err=>{
-        console.log(err)     
-      })
-  };
-  // console.log(movieInfo)
   return (
     <>
       <div className="movie-info-area">

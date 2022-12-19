@@ -26,7 +26,32 @@ export const getTopRatedMovies = apiClient.get(
 export const getUpComingMovies = apiClient.get(
   `/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
 );
-export const getGenreMovies = apiClient.get(
-  `genre/movie/list?api_key=${API_KEY}&language=en-US`
-);
+
+export const getRecommendationedMovies = async (movieId) => {
+  return await apiClient({
+    method: "get",
+    url: `/movie/${movieId}/recommendations?api_key=${API_KEY}&language=en-US&page=1`
+  })
+}
+
+export const getSimilarMovies = async (movieId) => {
+  return await apiClient({
+    method: "get",
+    url: `movie/${movieId}/similar?api_key=${API_KEY}&language=en-US&page=1`
+  })
+}
+
+export const getMovieInfoByMovieId = async(movieId) => {
+  return await apiClient({
+    method: "get",
+    url: `/movie/${movieId}?api_key=${API_KEY}&language=en-US`
+  })
+}
+
+export const getTrailerByMovieId = async(movieId) => {
+  return await apiClient({
+    method: "get",
+    url: `/movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`
+  })
+}
 

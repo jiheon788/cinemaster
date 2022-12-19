@@ -1,13 +1,8 @@
-import Modal from 'react-modal';
 import { useEffect, useState } from 'react';
-import axios from "axios";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MovieCardInModal from '../../MovieCardInModal';
-
-const API_KEY = process.env.REACT_APP_API_KEY;
-
-
+import { getRecommendationedMovies } from '../../../lib/api/tmdb';
 
 const responsive = {
   superLargeDesktop: {
@@ -35,15 +30,11 @@ const GetRecommendations = ({movieId, setMovieId})=>{
   const [rcmdMovies, setRcmdMovies] = useState([])
 
   useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${API_KEY}&language=en-US&page=1`).then(res=>{
+    getRecommendationedMovies(movieId).then(res => {
       setRcmdMovies(res.data.results)
-    }).catch(err=>{console.log(err)})
-  },[])
-
-  useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${API_KEY}&language=en-US&page=1`).then(res=>{
-      setRcmdMovies(res.data.results)
-    }).catch(err=>{console.log(err)})
+    }).catch(err => {
+      console.log(err)
+    })
   },[movieId])
 
 
