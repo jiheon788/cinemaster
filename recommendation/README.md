@@ -2,6 +2,10 @@
 
 # 시네마스터 - 추천시스템
 
+```
+uvicorn main:app --reload
+```
+
 </div>
 
 <div align="right">

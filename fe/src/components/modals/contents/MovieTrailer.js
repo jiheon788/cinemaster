@@ -7,10 +7,13 @@ const MovieTrailer = ({movieId})=>{
   const [trailerKey, setTrailerKey] = useState("");
 
   useEffect(() => {
+    console.log(1)
     getTrailerByMovieId(movieId)
   }, []);
   
   useEffect(() => {
+    console.log(2)
+
     getTrailerByMovieId(movieId)
   }, [movieId]);
 

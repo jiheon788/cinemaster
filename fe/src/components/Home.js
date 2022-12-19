@@ -33,6 +33,7 @@ const Home = () => {
            */
           recommendMovieListTmdbLoad(x.movieId)
             .then((res2) => {
+              console.log(res2)
               setRecommendList((apidata) => [...apidata, res2.data]);
             })
             .catch((err) => {
