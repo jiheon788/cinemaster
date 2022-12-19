@@ -137,7 +137,7 @@ async def recommend_movie(shortId: str):
         pipeline = [
             {"$match": {"userRef": auth_data}},
             {"$unwind": "$recommendList"},
-            {"$sample": {"size": 20}}
+            {"$sample": {"size": 10}}
         ]
 
         random_data = recommends.aggregate(pipeline)

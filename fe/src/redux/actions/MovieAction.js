@@ -1,4 +1,4 @@
-import { getPopularMovies, getTopRatedMovies, getUpComingMovies, getGenreMovies } from "../../lib/api/tmdb"
+import { getPopularMovies, getTopRatedMovies, getUpComingMovies } from "../../lib/api/tmdb"
 
 function getMovies() {
   return async (dispatch) => {
