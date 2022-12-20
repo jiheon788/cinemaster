@@ -2,7 +2,7 @@
 
 > 영화추천서비스 + 영화 리뷰 커뮤니티
 
-![013](https://user-images.githubusercontent.com/90181028/207554117-1332ed62-34a9-4a18-8718-2a6a744fcef9.png)
+![제목을-입력해주세요_-013](https://user-images.githubusercontent.com/90181028/208675579-f01dfbdd-48f0-410d-a79f-7946d7e33fdd.png)
 
 
 # 📑 INDEX
