@@ -75,14 +75,22 @@
 ![010](https://user-images.githubusercontent.com/90181028/207553904-9b7aab51-1b33-4f34-830e-d75ecd3ff4e0.png)
 
 
+
+
 # 7. DEMO
 
-<div align='left'>
+<div align='center'>
+
+   
+![1 홈](https://user-images.githubusercontent.com/90181028/208672510-bbe41110-297c-4b38-9e15-085ebc6df6dc.gif)
+![2 로그인](https://user-images.githubusercontent.com/90181028/208672534-cd432a22-0c0c-45c5-95d1-b92443369b29.gif)
+![3 프로필](https://user-images.githubusercontent.com/90181028/208672553-20872b59-24d6-4eb6-bfcb-95d7a190066f.gif)
+![4 추천](https://user-images.githubusercontent.com/90181028/208672566-e51af2db-015a-4ff6-ac4d-d3fb5b93f773.gif)
+![5 인포](https://user-images.githubusercontent.com/90181028/208672578-a172b1f5-551d-46ce-96ca-f51a34de0915.gif)
+![6 기타](https://user-images.githubusercontent.com/90181028/208672589-70abeb09-7ab1-43a7-a3f9-09012e08eecc.gif)
+
 <img src="https://user-images.githubusercontent.com/90181028/206181453-7b72c4cd-fcc9-494e-84a7-61583f7261d2.png" width="33%"/>
 <img src="https://user-images.githubusercontent.com/90181028/206181472-2dc41582-5637-4cde-9df5-4af541999b10.png" width="33%"/>
-<img src="https://user-images.githubusercontent.com/90181028/206181488-59c13da1-34e4-4514-9539-19f27bf63f1c.png" width="30%"/>
-   
-<img src="https://user-images.githubusercontent.com/90181028/206187763-482c4e51-5530-485f-b7c2-a89ffffc606c.gif" width="48%"/>
-<img src="https://user-images.githubusercontent.com/90181028/206188963-b96c2950-8322-4b1f-bf5e-87332f299c6d.gif" width="48%"/>
-   
+<img src="https://user-images.githubusercontent.com/90181028/206181488-59c13da1-34e4-4514-9539-19f27bf63f1c.png" width="29%"/>
+
 </div>
