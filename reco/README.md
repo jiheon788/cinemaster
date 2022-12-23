@@ -1,16 +1,12 @@
-<div align="center">
-
-# 시네마스터 - 추천시스템
+# 시네마스터 - 추천시스템서버
 
 ```
 uvicorn main:app --reload
 ```
 
+<!-- <div align="right">
+Author: @Hyyena
 </div>
-
-<div align="right">
-Author: @Hyyena  
-</div>  
 <br>
 
 <img src="https://img.shields.io/badge/Python-3.8-3776AB?style=flat&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/FastAPI-0.81.0-009688?style=flat&logo=FastAPI&logoColor=white"/> <img src="https://img.shields.io/badge/NumPy-1.23.2-013243?style=flat&logo=NumPy&logoColor=white"/> <img src="https://img.shields.io/badge/pandas-1.4.3-150458?style=flat&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/scikit--surprise-1.1.2-a4bdd0"/>
@@ -300,4 +296,4 @@ SVD는 Utility Matrix에서 잠재 요인을 추출하면서 행렬의 차원을
 
 이렇게 `유저`와 `아이템`을 직접적으로 비교하여 둘의 관계를 예측합니다.
 
-</details>
+</details> -->

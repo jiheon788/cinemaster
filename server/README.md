@@ -1,11 +1,11 @@
-<div align="center">
-
 # 시네마스터 - server
 
-</div>
+```
+nodemon index.js
+```
 
-<div align="right">
-Author: @jisulee42  
+<!-- <div align="right">
+Author: @jisulee42
 </div>
 
 ## :grin: 01. 중요 모듈
@@ -86,4 +86,4 @@ Author: @jisulee42
 
 ![image](https://user-images.githubusercontent.com/11794584/188101783-c57cfae6-4cb9-43d4-966b-4f77d3181f6a.png)
 
-Cloud MongoDB 를 사용하여 동일한 데이터로 테스트하도록 세팅
+Cloud MongoDB 를 사용하여 동일한 데이터로 테스트하도록 세팅 -->
