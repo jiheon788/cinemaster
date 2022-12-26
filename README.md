@@ -31,11 +31,16 @@
 - 개발 기간: 2022.08.01 ~ 2022.08.25
 
 # 2. TEAM
-
+| 박지헌      | 정영우          |
+| ----------- | --------------- |
+| @jiheon788  | @youngwoo-korea | 
+| FE / Design | PM / RS         | 
+<!--
 | 박지헌      | 정영우          | 이지수     | 천현우  |
 | ----------- | --------------- | ---------- | ------- |
 | @jiheon788  | @youngwoo-korea | @jisulee42 | @Hyyena |
 | FE / Design | PM / RS         | BE / 배포  | BE / RS |
+-->
 
 # 3. KEY FUNCTIONS
 
