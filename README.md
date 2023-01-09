@@ -28,7 +28,7 @@
 
 ### 1. Home
 
-![1 홈](https://user-images.githubusercontent.com/90181028/208672510-bbe41110-297c-4b38-9e15-085ebc6df6dc.gif)
+<img src="https://user-images.githubusercontent.com/90181028/208672510-bbe41110-297c-4b38-9e15-085ebc6df6dc.gif" width="98%" />
 
 - 랭킹 영화 중 랜덤으로 배너 출력
 - 랭킹, 평점랭킹, 개봉예정작, 사용자 추천 영화
@@ -36,14 +36,14 @@
 
 ### 2. 로그인 및 회원가입
 
-![2 로그인](https://user-images.githubusercontent.com/90181028/208672534-cd432a22-0c0c-45c5-95d1-b92443369b29.gif)
+<img src="https://user-images.githubusercontent.com/90181028/208672534-cd432a22-0c0c-45c5-95d1-b92443369b29.gif" width="98%" />
 
 - 로그인, 회원가입
 - 소셜로그인 (카카오, 네이버)
 
 ### 3. 추천시스템
 
-![4 추천](https://user-images.githubusercontent.com/90181028/208672566-e51af2db-015a-4ff6-ac4d-d3fb5b93f773.gif)
+<img src="https://user-images.githubusercontent.com/90181028/208672566-e51af2db-015a-4ff6-ac4d-d3fb5b93f773.gif" width="98%" />
 
 - 평가페이지에서 내가 본 영화에 별점을 매긴 후, 서버에 제출하면 영화 추천을 해준다. (평점기반 추천시스템)
 - 평가페이지는 랜덤한 영화 20개를 보여줌
@@ -51,7 +51,7 @@
 
 ### 4. Info
 
-![5 인포](https://user-images.githubusercontent.com/90181028/208672578-a172b1f5-551d-46ce-96ca-f51a34de0915.gif)
+<img src="https://user-images.githubusercontent.com/90181028/208672578-a172b1f5-551d-46ce-96ca-f51a34de0915.gif" width="98%" />
 
 - 유튜브 트레일러, 영화 정보들을 확인 가능
 - 북마크 기능
@@ -60,7 +60,7 @@
 
 ### 5. 사용자 맞춤 서비스
 
-![6 기타](https://user-images.githubusercontent.com/90181028/208672589-70abeb09-7ab1-43a7-a3f9-09012e08eecc.gif)
+<img src="https://user-images.githubusercontent.com/90181028/208672589-70abeb09-7ab1-43a7-a3f9-09012e08eecc.gif" width="98%" />
 
 - 프로필 관리, 작성 리뷰 관리, 북마크 목록
 - 유저 취향 분석 레포트 (별점분포도, 장르선호도, 리뷰 워드클라우드)
