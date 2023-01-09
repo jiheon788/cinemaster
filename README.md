@@ -2,7 +2,13 @@
 
 > 다양한 사용자 맞춤 서비스를 가진 영화 플랫폼
 
-![제목을-입력해주세요_-013](https://user-images.githubusercontent.com/90181028/208675579-f01dfbdd-48f0-410d-a79f-7946d7e33fdd.png)
+<div align='center'>
+
+<img src="https://user-images.githubusercontent.com/90181028/206181453-7b72c4cd-fcc9-494e-84a7-61583f7261d2.png" width="33%"/>
+<img src="https://user-images.githubusercontent.com/90181028/206181472-2dc41582-5637-4cde-9df5-4af541999b10.png" width="33%"/>
+<img src="https://user-images.githubusercontent.com/90181028/206181488-59c13da1-34e4-4514-9539-19f27bf63f1c.png" width="29%"/>
+
+</div>
 
 ## 👨🏻‍💻 Team
 
@@ -73,17 +79,7 @@
 
 ![image](https://user-images.githubusercontent.com/90181028/206125875-a396628d-ed2b-47c1-9f74-79713d356ef8.png)
 
-# 📷 Screenshots
-
-<div align='center'>
-
-<img src="https://user-images.githubusercontent.com/90181028/206181453-7b72c4cd-fcc9-494e-84a7-61583f7261d2.png" width="33%"/>
-<img src="https://user-images.githubusercontent.com/90181028/206181472-2dc41582-5637-4cde-9df5-4af541999b10.png" width="33%"/>
-<img src="https://user-images.githubusercontent.com/90181028/206181488-59c13da1-34e4-4514-9539-19f27bf63f1c.png" width="29%"/>
-
-![010](https://user-images.githubusercontent.com/90181028/207553904-9b7aab51-1b33-4f34-830e-d75ecd3ff4e0.png)
-
-</div>
+---
 
 ## Getting Started
 
